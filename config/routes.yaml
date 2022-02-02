@@ -5,3 +5,11 @@ index:
 test:
   path: /test
   controller: App\Controller\testController::test
+
+test2:
+  path: /test2/{age<\d+>?0}
+  controller: App\Controller\testController::test2
+  # defaults:
+    # age: 0
+  # requirements: 
+    # age: \d+

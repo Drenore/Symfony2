@@ -23,4 +23,10 @@ class testController
             return new Response("Vous avez $age ans"); 
             
         }
+
+        public function test2(Request $request, $age)
+        {
+            
+            return new Response("Vous avez $age ans !");
+        }
     }
