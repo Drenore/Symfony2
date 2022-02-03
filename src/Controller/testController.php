@@ -4,6 +4,7 @@
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class testController
     {
@@ -23,10 +24,21 @@ class testController
             return new Response("Vous avez $age ans"); 
             
         }
+     
 
         public function test2(Request $request, $age)
         {
-            
+
+            return new Response("Vous avez $age ans !");
+        }
+        /**
+         * 
+         * @Route("/test3/{age,<\d+>?0}", name="test3", methods={"GET", "POST"}, schemes={"HTTP", "HTTPS"})
+         * 
+         */
+        public function test3(Request $request, $age)
+        {
+
             return new Response("Vous avez $age ans !");
         }
     }
