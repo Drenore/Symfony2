@@ -1,6 +1,8 @@
-index:
-    path: /
-    controller: App\Controller\testController::index
+
+
+# index:
+#     path: /
+#     controller: App\Controller\testController::index
 
 test:
   path: /test
@@ -13,5 +15,9 @@ test2:
     # age: 0
   # requirements: 
     # age: \d+
+
+# hello:
+#   path: /hello/{nom?World}
+#   controller: App\Controller\HelloWorld::hello
 
 

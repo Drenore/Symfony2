@@ -1,13 +1,17 @@
 <?php 
 
-    namespace App\Controller;
+        namespace App\Controller;
 
-    use Symfony\Component\HttpFoundation\Request;
-    use Symfony\Component\HttpFoundation\Response;
-    use Symfony\Component\Routing\Annotation\Route;
+        use Symfony\Component\HttpFoundation\Request;
+        use Symfony\Component\HttpFoundation\Response;
+        use Symfony\Component\Routing\Annotation\Route;
 
 class testController
+
     {
+        /**
+         * @Route("/", name="index")
+         */
         public function index()
         {
             dd("ça fonctionne !");
@@ -33,7 +37,7 @@ class testController
         }
         /**
          * 
-         * @Route("/test3/{age,<\d+>?0}", name="test3", methods={"GET", "POST"}, schemes={"HTTP", "HTTPS"})
+         * @Route("/test3/{age<\d+>?0}", name="test3", methods={"GET", "POST"}, schemes={"HTTP", "HTTPS"})
          * 
          */
         public function test3(Request $request, $age)
